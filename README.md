@@ -44,9 +44,9 @@ Es necesario tener Docker y Docker Compose instalados previamente.
 
 ---
 
-## 🌐 English Version (markdown)
+## 🌐 English Version 
 
-```markdown
+
 # 🛴 Microservices - Electric Scooter Rental System
 
 This project is a backend application built using microservices architecture. It simulates an electric scooter rental system, with multiple features distributed across independent services.
