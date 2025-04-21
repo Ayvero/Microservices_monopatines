@@ -34,7 +34,7 @@ Los servicios pueden ejecutarse de forma independiente para pruebas individuales
 
 Para probar los endpoints, se incluye una colección de Postman exportada:
 
-- [`coleccion-monopatines.postman_collection.json`](postman/coleccion-monopatines.postman_collection.json)
+- [`coleccion-monopatines.postman_collection.json`](https://github.com/Ayvero/Microservices_monopatines/blob/main/Monopatines.postman_collection.json)
 
 Importala en Postman para probar todos los endpoints de los microservicios.
 
