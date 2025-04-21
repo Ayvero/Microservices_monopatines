@@ -30,7 +30,16 @@ sus métodos HTTP, los parámetros requeridos y ejemplos de uso.
 
 Los servicios pueden ejecutarse de forma independiente para pruebas individuales.
 
-Se recomienda utilizar Postman o Swagger UI (si está habilitado) para testear los endpoints.
+## 📦 Colección Postman
+
+Para probar los endpoints, se incluye una colección de Postman exportada:
+
+- [`coleccion-monopatines.postman_collection.json`](postman/coleccion-monopatines.postman_collection.json)
+
+Importala en Postman para probar todos los endpoints de los microservicios.
+
+
+
 
 ## ⚙️ Cómo ejecutar el proyecto
 
