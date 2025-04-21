@@ -1,0 +1,67 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: microservicio-gateway
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/autorizacion?createDatabaseIfNotExist=true
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database: mysql
+  cloud:
+    gateway:
+      mvc:
+        routes:
+          - id: micromonopatin
+            uri:  http://localhost:8009
+            predicates:
+              - Path=/api/monopatines/**,/swagger-ui/**
+            filters:
+              - AddRequestHeader=Authorization,Bearer {token}
+          - id: microusuario
+            uri: http://localhost:8006
+            predicates:
+              - Path=/api/usuarios/**,/api/cuentas/**
+          - id: microviaje
+            uri: http://localhost:8010
+            predicates:
+              - Path=/api/viajes/**,/api/pausas/**
+          - id: microadministrador
+            uri: http://localhost:8007
+            predicates:
+              - Path=/api/administrador/**,/api/paradas/**,/api/tarifas/**
+          - id: micromantenimiento
+            uri: http://localhost:8008
+            predicates:
+              - Path=/api/mantenimiento/**
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG
+
+
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+  openapi:
+    info:
+      title: "Microservices API"
+      description: "API documentation for the Gateway and Microservices"
+      version: "1.0.0"
+    security:
+      - bearerAuth: []
+  security:
+    oAuth2:
+      bearerAuth:
+        type: http
+        scheme: bearer
+        bearerFormat: JWT
+
+
