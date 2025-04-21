@@ -1,0 +1,3722 @@
+{
+	"info": {
+		"_postman_id": "422c10dc-b69b-4bcc-8dc1-dc780fc5b9a9",
+		"name": "Monopatines",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24216632",
+		"_collection_link": "https://tp0000-6723.postman.co/workspace/TP-Workspace~af26e3b8-6149-4213-a7df-92b531377782/collection/24216632-422c10dc-b69b-4bcc-8dc1-dc780fc5b9a9?action=share&source=collection_link&creator=24216632"
+	},
+	"item": [
+		{
+			"name": "paradas",
+			"item": [
+				{
+					"name": "crear parada",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtYXJjZWxvIiwiYXV0aCI6IkFETUlOIiwiZXhwIjoxNzMyMjI0OTY3LCJpYXQiOjE3MzIxMzg1Njd9.E9Qur6Ywe7kyIJ6SaYsu0QldPZ-H58rc2lc6OM_PTEcNCnztlBMYQ38VOUA1kMSWjWijD7mLaPNI5HIEHp3NjQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"latitud\": 55,\r\n    \"longitud\": 88\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/paradas/registrarParada",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"paradas",
+								"registrarParada"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscar parada",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtYXJjZWxvIiwiYXV0aCI6IkFETUlOIiwiZXhwIjoxNzMyMjI0OTY3LCJpYXQiOjE3MzIxMzg1Njd9.E9Qur6Ywe7kyIJ6SaYsu0QldPZ-H58rc2lc6OM_PTEcNCnztlBMYQ38VOUA1kMSWjWijD7mLaPNI5HIEHp3NjQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n  {\r\n    \"latitud\": -34.603722,\r\n    \"longitud\": -58.381592\r\n  },\r\n  {\r\n    \"latitud\": -34.609722,\r\n    \"longitud\": -58.382111\r\n  },\r\n  {\r\n    \"latitud\": -34.615852,\r\n    \"longitud\": -58.383333\r\n  }\r\n]\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/paradas/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"paradas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar parada",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtYXJjZWxvIiwiYXV0aCI6IkFETUlOIiwiZXhwIjoxNzMyMjI0OTY3LCJpYXQiOjE3MzIxMzg1Njd9.E9Qur6Ywe7kyIJ6SaYsu0QldPZ-H58rc2lc6OM_PTEcNCnztlBMYQ38VOUA1kMSWjWijD7mLaPNI5HIEHp3NjQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n  {\r\n    \"latitud\": -34.603722,\r\n    \"longitud\": -58.381592\r\n  }\r\n  \r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/paradas/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"paradas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "quitar parada",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtYXJjZWxvIiwiYXV0aCI6IkFETUlOIiwiZXhwIjoxNzMyMjI0OTY3LCJpYXQiOjE3MzIxMzg1Njd9.E9Qur6Ywe7kyIJ6SaYsu0QldPZ-H58rc2lc6OM_PTEcNCnztlBMYQ38VOUA1kMSWjWijD7mLaPNI5HIEHp3NjQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n  {\r\n    \"latitud\": -34.603722,\r\n    \"longitud\": -58.381592\r\n  }\r\n  \r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/paradas/quitarParada/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"paradas",
+								"quitarParada",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get todas las paradas",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtYXJjZWxvIiwiYXV0aCI6IkFETUlOIiwiZXhwIjoxNzMyMjI0OTY3LCJpYXQiOjE3MzIxMzg1Njd9.E9Qur6Ywe7kyIJ6SaYsu0QldPZ-H58rc2lc6OM_PTEcNCnztlBMYQ38VOUA1kMSWjWijD7mLaPNI5HIEHp3NjQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n  {\r\n    \"latitud\": -34.603722,\r\n    \"longitud\": -58.381592\r\n  }\r\n  \r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/paradas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"paradas"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "administrador",
+			"item": [
+				{
+					"name": "reporteMonopatines",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtYXJjZWxvIiwiYXV0aCI6IkFETUlOIiwiZXhwIjoxNzMyMjI0OTY3LCJpYXQiOjE3MzIxMzg1Njd9.E9Qur6Ywe7kyIJ6SaYsu0QldPZ-H58rc2lc6OM_PTEcNCnztlBMYQ38VOUA1kMSWjWijD7mLaPNI5HIEHp3NjQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/administrador/reporte/monopatines?anio=2024&minViajes=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"administrador",
+								"reporte",
+								"monopatines"
+							],
+							"query": [
+								{
+									"key": "anio",
+									"value": "2024"
+								},
+								{
+									"key": "minViajes",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/api/viajes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtYXJjZWxvIiwiYXV0aCI6IkFETUlOIiwiZXhwIjoxNzMyMjI0OTY3LCJpYXQiOjE3MzIxMzg1Njd9.E9Qur6Ywe7kyIJ6SaYsu0QldPZ-H58rc2lc6OM_PTEcNCnztlBMYQ38VOUA1kMSWjWijD7mLaPNI5HIEHp3NjQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"Ana\",\r\n  \"password\": \"1234\",\r\n  \r\n  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/viajes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"viajes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reporteMonopatines",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtYXJjZWxvIiwiYXV0aCI6IkFETUlOIiwiZXhwIjoxNzMyMjI0OTY3LCJpYXQiOjE3MzIxMzg1Njd9.E9Qur6Ywe7kyIJ6SaYsu0QldPZ-H58rc2lc6OM_PTEcNCnztlBMYQ38VOUA1kMSWjWijD7mLaPNI5HIEHp3NjQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/administrador/reporte/facturado?anio=2024&mesInicio=1&mesFin=3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"administrador",
+								"reporte",
+								"facturado"
+							],
+							"query": [
+								{
+									"key": "anio",
+									"value": "2024"
+								},
+								{
+									"key": "mesInicio",
+									"value": "1"
+								},
+								{
+									"key": "mesFin",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reporteTotalFacturado",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtYXJjZWxvIiwiYXV0aCI6IkFETUlOIiwiZXhwIjoxNzMyMjI0OTY3LCJpYXQiOjE3MzIxMzg1Njd9.E9Qur6Ywe7kyIJ6SaYsu0QldPZ-H58rc2lc6OM_PTEcNCnztlBMYQ38VOUA1kMSWjWijD7mLaPNI5HIEHp3NjQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/administrador/reporte/facturado?anio=2024&mesInicio=1&mesFin=3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"administrador",
+								"reporte",
+								"facturado"
+							],
+							"query": [
+								{
+									"key": "anio",
+									"value": "2024"
+								},
+								{
+									"key": "mesInicio",
+									"value": "1"
+								},
+								{
+									"key": "mesFin",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reporteEstadoMonopatines",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjYW1pbG8iLCJhdXRoIjoiQURNSU4iLCJleHAiOjE3MzI2MjYyMjQsImlhdCI6MTczMjUzOTgyNH0.emN5nQ_5FVu5vCSopZOtovjD3dutRK1LLlyVQLxVSKSlScqvjdhFUHDTFrAArmtiw6xNwumYCnaAci2Y3fylrQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/administrador/estado-monopatines",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"administrador",
+								"estado-monopatines"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ajuste de tarifa",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtYXJjZWxvIiwiYXV0aCI6IkFETUlOIiwiZXhwIjoxNzMyMjI0OTY3LCJpYXQiOjE3MzIxMzg1Njd9.E9Qur6Ywe7kyIJ6SaYsu0QldPZ-H58rc2lc6OM_PTEcNCnztlBMYQ38VOUA1kMSWjWijD7mLaPNI5HIEHp3NjQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/administrador/ajustes/tarifas?fechaAjuste=2024-05-01&porcentajeBase=5&porcentajeExtra=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"administrador",
+								"ajustes",
+								"tarifas"
+							],
+							"query": [
+								{
+									"key": "fechaAjuste",
+									"value": "2024-05-01"
+								},
+								{
+									"key": "porcentajeBase",
+									"value": "5"
+								},
+								{
+									"key": "porcentajeExtra",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crear monopatin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtYXJjZWxvIiwiYXV0aCI6IkFETUlOIiwiZXhwIjoxNzMyMjI0OTY3LCJpYXQiOjE3MzIxMzg1Njd9.E9Qur6Ywe7kyIJ6SaYsu0QldPZ-H58rc2lc6OM_PTEcNCnztlBMYQ38VOUA1kMSWjWijD7mLaPNI5HIEHp3NjQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"modelo\": \"xx300\",\r\n    \"estado\": \"bueno\",\r\n    \"latitud\": 35,\r\n    \"longitud\": 78\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/administrador/monopatines",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"administrador",
+								"monopatines"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "borrar monopatin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtYXJjZWxvIiwiYXV0aCI6IkFETUlOIiwiZXhwIjoxNzMyMjI0OTY3LCJpYXQiOjE3MzIxMzg1Njd9.E9Qur6Ywe7kyIJ6SaYsu0QldPZ-H58rc2lc6OM_PTEcNCnztlBMYQ38VOUA1kMSWjWijD7mLaPNI5HIEHp3NjQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"modelo\": \"xx300\",\r\n    \"estado\": \"bueno\",\r\n    \"latitud\": 35,\r\n    \"longitud\": 78\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/administrador/monopatines/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"administrador",
+								"monopatines",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get monopatin",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtYXJjZWxvIiwiYXV0aCI6IkFETUlOIiwiZXhwIjoxNzMyMjI0OTY3LCJpYXQiOjE3MzIxMzg1Njd9.E9Qur6Ywe7kyIJ6SaYsu0QldPZ-H58rc2lc6OM_PTEcNCnztlBMYQ38VOUA1kMSWjWijD7mLaPNI5HIEHp3NjQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"modelo\": \"xx300\",\r\n    \"estado\": \"bueno\",\r\n    \"latitud\": 35,\r\n    \"longitud\": 78\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/administrador/monopatines/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"administrador",
+								"monopatines",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ver todos los viajes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjYW1pbG8iLCJhdXRoIjoiQURNSU4iLCJleHAiOjE3MzI2MjYyMjQsImlhdCI6MTczMjUzOTgyNH0.emN5nQ_5FVu5vCSopZOtovjD3dutRK1LLlyVQLxVSKSlScqvjdhFUHDTFrAArmtiw6xNwumYCnaAci2Y3fylrQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"Ana\",\r\n  \"password\": \"1234\",\r\n  \r\n  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/viajes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"viajes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tarifas",
+			"item": [
+				{
+					"name": "crear tarifas",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtYXJjZWxvIiwiYXV0aCI6IkFETUlOIiwiZXhwIjoxNzMyMjI0OTY3LCJpYXQiOjE3MzIxMzg1Njd9.E9Qur6Ywe7kyIJ6SaYsu0QldPZ-H58rc2lc6OM_PTEcNCnztlBMYQ38VOUA1kMSWjWijD7mLaPNI5HIEHp3NjQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " [\r\n{\r\n  \"fecha\": \"2024-11-01\",\r\n  \"tarifaBasePorMinuto\": 1.0,\r\n  \"tarifaExtraPorMinuto\": 1.5\r\n},\r\n {\r\n  \"fecha\": \"2024-11-15\",\r\n  \"tarifaBasePorMinuto\": 1.5,\r\n  \"tarifaExtraPorMinuto\": 2.0\r\n  }\r\n ]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/tarifas/crearTarifas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"tarifas",
+								"crearTarifas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crear tarifa",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtYXJjZWxvIiwiYXV0aCI6IkFETUlOIiwiZXhwIjoxNzMyMjI0OTY3LCJpYXQiOjE3MzIxMzg1Njd9.E9Qur6Ywe7kyIJ6SaYsu0QldPZ-H58rc2lc6OM_PTEcNCnztlBMYQ38VOUA1kMSWjWijD7mLaPNI5HIEHp3NjQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " \r\n{\r\n  \"fecha\": \"2024-10-01\",\r\n  \"tarifaBasePorMinuto\": 1.3,\r\n  \"tarifaExtraPorMinuto\": 1.8\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/tarifas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"tarifas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get tarifa",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtYXJjZWxvIiwiYXV0aCI6IkFETUlOIiwiZXhwIjoxNzMyMjI0OTY3LCJpYXQiOjE3MzIxMzg1Njd9.E9Qur6Ywe7kyIJ6SaYsu0QldPZ-H58rc2lc6OM_PTEcNCnztlBMYQ38VOUA1kMSWjWijD7mLaPNI5HIEHp3NjQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " \r\n{\r\n  \"fecha\": \"2024-10-01\",\r\n  \"tarifaBasePorMinuto\": 1.3,\r\n  \"tarifaExtraPorMinuto\": 1.8\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/tarifas/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"tarifas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar tarifa",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtYXJjZWxvIiwiYXV0aCI6IkFETUlOIiwiZXhwIjoxNzMyMjI0OTY3LCJpYXQiOjE3MzIxMzg1Njd9.E9Qur6Ywe7kyIJ6SaYsu0QldPZ-H58rc2lc6OM_PTEcNCnztlBMYQ38VOUA1kMSWjWijD7mLaPNI5HIEHp3NjQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " \r\n{\r\n  \"fecha\": \"2024-10-01\",\r\n  \"tarifaBasePorMinuto\": 1.9,\r\n  \"tarifaExtraPorMinuto\": 1.8\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/tarifas/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"tarifas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminar tarifa",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtYXJjZWxvIiwiYXV0aCI6IkFETUlOIiwiZXhwIjoxNzMyMjI0OTY3LCJpYXQiOjE3MzIxMzg1Njd9.E9Qur6Ywe7kyIJ6SaYsu0QldPZ-H58rc2lc6OM_PTEcNCnztlBMYQ38VOUA1kMSWjWijD7mLaPNI5HIEHp3NjQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " \r\n{\r\n  \"fecha\": \"2024-10-01\",\r\n  \"tarifaBasePorMinuto\": 1.9,\r\n  \"tarifaExtraPorMinuto\": 1.8\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/tarifas/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"tarifas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ver si existe  tarifa",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtYXJjZWxvIiwiYXV0aCI6IkFETUlOIiwiZXhwIjoxNzMyMjI0OTY3LCJpYXQiOjE3MzIxMzg1Njd9.E9Qur6Ywe7kyIJ6SaYsu0QldPZ-H58rc2lc6OM_PTEcNCnztlBMYQ38VOUA1kMSWjWijD7mLaPNI5HIEHp3NjQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " \r\n{\r\n  \"fecha\": \"2024-10-01\",\r\n  \"tarifaBasePorMinuto\": 1.9,\r\n  \"tarifaExtraPorMinuto\": 1.8\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/tarifas/tarifa/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"tarifas",
+								"tarifa",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ver todas las  tarifas",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtYXJjZWxvIiwiYXV0aCI6IkFETUlOIiwiZXhwIjoxNzMyMjI0OTY3LCJpYXQiOjE3MzIxMzg1Njd9.E9Qur6Ywe7kyIJ6SaYsu0QldPZ-H58rc2lc6OM_PTEcNCnztlBMYQ38VOUA1kMSWjWijD7mLaPNI5HIEHp3NjQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " \r\n{\r\n  \"fecha\": \"2024-10-01\",\r\n  \"tarifaBasePorMinuto\": 1.9,\r\n  \"tarifaExtraPorMinuto\": 1.8\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/tarifas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"tarifas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ver  tarifas actual",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtYXJjZWxvIiwiYXV0aCI6IkFETUlOIiwiZXhwIjoxNzMyMjI0OTY3LCJpYXQiOjE3MzIxMzg1Njd9.E9Qur6Ywe7kyIJ6SaYsu0QldPZ-H58rc2lc6OM_PTEcNCnztlBMYQ38VOUA1kMSWjWijD7mLaPNI5HIEHp3NjQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " \r\n{\r\n  \"fecha\": \"2024-10-01\",\r\n  \"tarifaBasePorMinuto\": 1.9,\r\n  \"tarifaExtraPorMinuto\": 1.8\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/tarifas/actual",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"tarifas",
+								"actual"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "http://localhost:8080/api/users",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"Soledad\",\r\n  \"password\": \"1234\",\r\n  \"authorities\": [\r\n    \"ADMIN\"\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/api/authenticate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"MarcelO\",\r\n  \"password\": \"7777\",\r\n  \"authorities\": [\"ADMIN\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/authenticate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"authenticate"
+							]
+						},
+						"description": "atenticacion de nuevo user"
+					},
+					"response": []
+				},
+				{
+					"name": "admin-user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"Camilo\",\r\n  \"password\": \"1234\",\r\n  \"authorities\": [\r\n    \"ADMIN\"\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "admin-authenticate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"Camilo\",\r\n  \"password\": \"1234\",\r\n  \"authorities\": [\r\n    \"ADMIN\"\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/authenticate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"authenticate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "manten-user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"Jose\",\r\n  \"password\": \"1234\",\r\n  \"authorities\": [\r\n    \"MANTEN\"\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "manten-authenticate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"Jose\",\r\n  \"password\": \"1234\",\r\n  \"authorities\": [\r\n    \"MANTEN\"\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/authenticate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"authenticate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Mantenimiento",
+			"item": [
+				{
+					"name": "nuevo mantenimiento",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqdWFuIiwiYXV0aCI6Ik1BTlRFTiIsImV4cCI6MTczMjQ1NTQ3MSwiaWF0IjoxNzMyMzY5MDcxfQ.oLK2iOXPxtf0hT4WYAG9hwweUBYpLy0bLR_8DVxdoJvG_XaXkPiQyQ1a8n9ur2vVXn01vRv47W306I-qpPnB3g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"monopatinId\": 2,\r\n         \"fechaInicioMantenimiento\": \"2024-11-17T12:00:00\",\r\n         \"descripcion\": \"Cambio de bateria\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/mantenimiento",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"mantenimiento"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtener todos los mantenimientos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqdWFuIiwiYXV0aCI6Ik1BTlRFTiIsImV4cCI6MTczMjQ1NTQ3MSwiaWF0IjoxNzMyMzY5MDcxfQ.oLK2iOXPxtf0hT4WYAG9hwweUBYpLy0bLR_8DVxdoJvG_XaXkPiQyQ1a8n9ur2vVXn01vRv47W306I-qpPnB3g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"monopatinId\": 4,\r\n         \"fechaInicioMantenimiento\": \"2024-11-11T12:00:00\",\r\n         \"descripcion\": \"Cambio de llantas\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/mantenimiento",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"mantenimiento"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtener mantenimiento por id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqdWFuIiwiYXV0aCI6Ik1BTlRFTiIsImV4cCI6MTczMjQ1NTQ3MSwiaWF0IjoxNzMyMzY5MDcxfQ.oLK2iOXPxtf0hT4WYAG9hwweUBYpLy0bLR_8DVxdoJvG_XaXkPiQyQ1a8n9ur2vVXn01vRv47W306I-qpPnB3g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"monopatinId\": 4,\r\n         \"fechaInicioMantenimiento\": \"2024-11-11T12:00:00\",\r\n         \"descripcion\": \"Cambio de llantas\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/mantenimiento/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"mantenimiento",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar mantenimiento ",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqdWFuIiwiYXV0aCI6Ik1BTlRFTiIsImV4cCI6MTczMjQ1NTQ3MSwiaWF0IjoxNzMyMzY5MDcxfQ.oLK2iOXPxtf0hT4WYAG9hwweUBYpLy0bLR_8DVxdoJvG_XaXkPiQyQ1a8n9ur2vVXn01vRv47W306I-qpPnB3g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n       \"monopatinId\": 4,\r\n        \"fechaInicioMantenimiento\": \"2024-10-11T12:00:00\",\r\n       \"fechaFinMantenimiento\": \"2024-11-11T12:00:00\",\r\n        \"descripcion\": \"Cambio de llantas y  pintura\"\r\n    }\r\n   ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/mantenimiento/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"mantenimiento",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "borrar mantenimiento ",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqdWFuIiwiYXV0aCI6Ik1BTlRFTiIsImV4cCI6MTczMjQ1NTQ3MSwiaWF0IjoxNzMyMzY5MDcxfQ.oLK2iOXPxtf0hT4WYAG9hwweUBYpLy0bLR_8DVxdoJvG_XaXkPiQyQ1a8n9ur2vVXn01vRv47W306I-qpPnB3g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n       \"monopatinId\": 4,\r\n        \"fechaInicioMantenimiento\": \"2024-10-11T12:00:00\",\r\n       \"fechaFinMantenimiento\": \"2024-11-11T12:00:00\",\r\n        \"descripcion\": \"Cambio de llantas y  pintura\"\r\n    }\r\n   ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/mantenimiento/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"mantenimiento",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reporte de uso de monopatines",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqdWFuIiwiYXV0aCI6Ik1BTlRFTiIsImV4cCI6MTczMjQ1NTQ3MSwiaWF0IjoxNzMyMzY5MDcxfQ.oLK2iOXPxtf0hT4WYAG9hwweUBYpLy0bLR_8DVxdoJvG_XaXkPiQyQ1a8n9ur2vVXn01vRv47W306I-qpPnB3g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"monopatinId\": 4,\r\n         \"fechaInicioMantenimiento\": \"2024-11-11T12:00:00\",\r\n         \"descripcion\": \"Cambio de llantas\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/mantenimiento/reporteUso-monopatines?includeSinPausa=true",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"mantenimiento",
+								"reporteUso-monopatines"
+							],
+							"query": [
+								{
+									"key": "includeSinPausa",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar estado de monopatines",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqdWFuIiwiYXV0aCI6Ik1BTlRFTiIsImV4cCI6MTczMjQ1NTQ3MSwiaWF0IjoxNzMyMzY5MDcxfQ.oLK2iOXPxtf0hT4WYAG9hwweUBYpLy0bLR_8DVxdoJvG_XaXkPiQyQ1a8n9ur2vVXn01vRv47W306I-qpPnB3g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"monopatinId\": 4,\r\n         \"fechaInicioMantenimiento\": \"2024-11-11T12:00:00\",\r\n         \"descripcion\": \"Cambio de llantas\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/mantenimiento/actualizar-estado?includeSinPausa=true&maxKm=50",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"mantenimiento",
+								"actualizar-estado"
+							],
+							"query": [
+								{
+									"key": "includeSinPausa",
+									"value": "true"
+								},
+								{
+									"key": "maxKm",
+									"value": "50"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultar mantenimientos de un monopatin",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqdWFuIiwiYXV0aCI6Ik1BTlRFTiIsImV4cCI6MTczMjQ1NTQ3MSwiaWF0IjoxNzMyMzY5MDcxfQ.oLK2iOXPxtf0hT4WYAG9hwweUBYpLy0bLR_8DVxdoJvG_XaXkPiQyQ1a8n9ur2vVXn01vRv47W306I-qpPnB3g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"monopatinId\": 4,\r\n         \"fechaInicioMantenimiento\": \"2024-11-11T12:00:00\",\r\n         \"descripcion\": \"Cambio de llantas\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/mantenimiento/monopatin/1/mantenimientos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"mantenimiento",
+								"monopatin",
+								"1",
+								"mantenimientos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crear monopatin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqdWFuYSIsImF1dGgiOiJBRE1JTiIsImV4cCI6MTczMjQ1NzAxMywiaWF0IjoxNzMyMzcwNjEzfQ.R0Jm1DFrPUhzYVQG3KHeseow6eJZ63acDlf_xSkVCMa2YhLFXqURlQ-3J6jWkUi3krzO3zP4EeTkNQE7zedreQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"modelo\": \"Modelo 7\",\r\n        \"latitud\": 68,\r\n        \"longitud\": 58,\r\n        \"estado\": \"en-operacion\",\r\n        \"disponible\": true,\r\n        \"tiempoUsoConPausa\": 120,\r\n        \"tiempoUsoSinPausa\": 100,\r\n        \"totalKmRecorridos\": 15.5\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/monopatines",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"monopatines"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "monopatines",
+			"item": [
+				{
+					"name": "crear monopatin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqdWFuIiwiYXV0aCI6Ik1BTlRFTiIsImV4cCI6MTczMjQ1NTQ3MSwiaWF0IjoxNzMyMzY5MDcxfQ.oLK2iOXPxtf0hT4WYAG9hwweUBYpLy0bLR_8DVxdoJvG_XaXkPiQyQ1a8n9ur2vVXn01vRv47W306I-qpPnB3g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"modelo\": \"Modelo 6\",\r\n        \"latitud\": 25,\r\n        \"longitud\": 50,\r\n        \"estado\": \"en-operacion\",\r\n        \"disponible\": true,\r\n        \"tiempoUsoConPausa\": 120,\r\n        \"tiempoUsoSinPausa\": 100,\r\n        \"totalKmRecorridos\": 15.5\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/monopatines",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"monopatines"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ver monopatin por id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqdWFuIiwiYXV0aCI6Ik1BTlRFTiIsImV4cCI6MTczMjQ1NTQ3MSwiaWF0IjoxNzMyMzY5MDcxfQ.oLK2iOXPxtf0hT4WYAG9hwweUBYpLy0bLR_8DVxdoJvG_XaXkPiQyQ1a8n9ur2vVXn01vRv47W306I-qpPnB3g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"modelo\": \"Modelo 6\",\r\n        \"latitud\": 25,\r\n        \"longitud\": 50,\r\n        \"estado\": \"en-operacion\",\r\n        \"disponible\": true,\r\n        \"tiempoUsoConPausa\": 120,\r\n        \"tiempoUsoSinPausa\": 100,\r\n        \"totalKmRecorridos\": 15.5\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/monopatines/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"monopatines",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar monopatin por id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqdWFuIiwiYXV0aCI6Ik1BTlRFTiIsImV4cCI6MTczMjQ1NTQ3MSwiaWF0IjoxNzMyMzY5MDcxfQ.oLK2iOXPxtf0hT4WYAG9hwweUBYpLy0bLR_8DVxdoJvG_XaXkPiQyQ1a8n9ur2vVXn01vRv47W306I-qpPnB3g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"modelo\": \"ModeloX\",\r\n        \"latitud\": 40.715000,\r\n        \"longitud\": -74.005000,\r\n        \"estado\": \"en-mantenimiento\",\r\n        \"disponible\": false,\r\n        \"tiempoUsoConPausa\": 150,\r\n        \"tiempoUsoSinPausa\": 130,\r\n        \"totalKmRecorridos\": 18.5\r\n    }\r\n    ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/monopatines/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"monopatines",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "borrar  monopatin por id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqdWFuIiwiYXV0aCI6Ik1BTlRFTiIsImV4cCI6MTczMjQ1NTQ3MSwiaWF0IjoxNzMyMzY5MDcxfQ.oLK2iOXPxtf0hT4WYAG9hwweUBYpLy0bLR_8DVxdoJvG_XaXkPiQyQ1a8n9ur2vVXn01vRv47W306I-qpPnB3g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"modelo\": \"ModeloX\",\r\n        \"latitud\": 40.715000,\r\n        \"longitud\": -74.005000,\r\n        \"estado\": \"en-mantenimiento\",\r\n        \"disponible\": false,\r\n        \"tiempoUsoConPausa\": 150,\r\n        \"tiempoUsoSinPausa\": 130,\r\n        \"totalKmRecorridos\": 18.5\r\n    }\r\n    ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/monopatines/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"monopatines",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crear monopatines",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqdWFuIiwiYXV0aCI6Ik1BTlRFTiIsImV4cCI6MTczMjQ1NTQ3MSwiaWF0IjoxNzMyMzY5MDcxfQ.oLK2iOXPxtf0hT4WYAG9hwweUBYpLy0bLR_8DVxdoJvG_XaXkPiQyQ1a8n9ur2vVXn01vRv47W306I-qpPnB3g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  [\r\n        {\r\n            \"modelo\": \"Modelo 7\",\r\n            \"latitud\": -37.1234,\r\n           \"longitud\": -59.1234,\r\n            \"estado\": \"en-operacion\",\r\n            \"disponible\": true,\r\n            \"tiempoUsoConPausa\": 120,\r\n            \"tiempoUsoSinPausa\": 100,\r\n            \"totalKmRecorridos\": 15.5\r\n        },\r\n        {\r\n            \"modelo\": \"Modelo 8\",\r\n            \"latitud\": 10,\r\n            \"longitud\": 20,\r\n            \"estado\": \"en-operacion\",\r\n            \"disponible\": true,\r\n            \"tiempoUsoConPausa\": 150,\r\n            \"tiempoUsoSinPausa\": 120,\r\n            \"totalKmRecorridos\": 20.3\r\n        }\r\n    ]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/monopatines/crearMonopatines",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"monopatines",
+								"crearMonopatines"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ver todos los monopatines",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqdWFuIiwiYXV0aCI6Ik1BTlRFTiIsImV4cCI6MTczMjQ1NTQ3MSwiaWF0IjoxNzMyMzY5MDcxfQ.oLK2iOXPxtf0hT4WYAG9hwweUBYpLy0bLR_8DVxdoJvG_XaXkPiQyQ1a8n9ur2vVXn01vRv47W306I-qpPnB3g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  [\r\n        {\r\n            \"modelo\": \"Modelo 7\",\r\n            \"latitud\": -37.1234,\r\n           \"longitud\": -59.1234,\r\n            \"estado\": \"en-operacion\",\r\n            \"disponible\": true,\r\n            \"tiempoUsoConPausa\": 120,\r\n            \"tiempoUsoSinPausa\": 100,\r\n            \"totalKmRecorridos\": 15.5\r\n        },\r\n        {\r\n            \"modelo\": \"Modelo 8\",\r\n            \"latitud\": 10,\r\n            \"longitud\": 20,\r\n            \"estado\": \"en-operacion\",\r\n            \"disponible\": true,\r\n            \"tiempoUsoConPausa\": 150,\r\n            \"tiempoUsoSinPausa\": 120,\r\n            \"totalKmRecorridos\": 20.3\r\n        }\r\n    ]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/monopatines",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"monopatines"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ver si monopatin existe",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqdWFuIiwiYXV0aCI6Ik1BTlRFTiIsImV4cCI6MTczMjQ1NTQ3MSwiaWF0IjoxNzMyMzY5MDcxfQ.oLK2iOXPxtf0hT4WYAG9hwweUBYpLy0bLR_8DVxdoJvG_XaXkPiQyQ1a8n9ur2vVXn01vRv47W306I-qpPnB3g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  [\r\n        {\r\n            \"modelo\": \"Modelo 7\",\r\n            \"latitud\": -37.1234,\r\n           \"longitud\": -59.1234,\r\n            \"estado\": \"en-operacion\",\r\n            \"disponible\": true,\r\n            \"tiempoUsoConPausa\": 120,\r\n            \"tiempoUsoSinPausa\": 100,\r\n            \"totalKmRecorridos\": 15.5\r\n        },\r\n        {\r\n            \"modelo\": \"Modelo 8\",\r\n            \"latitud\": 10,\r\n            \"longitud\": 20,\r\n            \"estado\": \"en-operacion\",\r\n            \"disponible\": true,\r\n            \"tiempoUsoConPausa\": 150,\r\n            \"tiempoUsoSinPausa\": 120,\r\n            \"totalKmRecorridos\": 20.3\r\n        }\r\n    ]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/monopatin/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"monopatin",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reporte de uso",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqdWFuIiwiYXV0aCI6Ik1BTlRFTiIsImV4cCI6MTczMjQ1NTQ3MSwiaWF0IjoxNzMyMzY5MDcxfQ.oLK2iOXPxtf0hT4WYAG9hwweUBYpLy0bLR_8DVxdoJvG_XaXkPiQyQ1a8n9ur2vVXn01vRv47W306I-qpPnB3g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  [\r\n        {\r\n            \"modelo\": \"Modelo 7\",\r\n            \"latitud\": -37.1234,\r\n           \"longitud\": -59.1234,\r\n            \"estado\": \"en-operacion\",\r\n            \"disponible\": true,\r\n            \"tiempoUsoConPausa\": 120,\r\n            \"tiempoUsoSinPausa\": 100,\r\n            \"totalKmRecorridos\": 15.5\r\n        },\r\n        {\r\n            \"modelo\": \"Modelo 8\",\r\n            \"latitud\": 10,\r\n            \"longitud\": 20,\r\n            \"estado\": \"en-operacion\",\r\n            \"disponible\": true,\r\n            \"tiempoUsoConPausa\": 150,\r\n            \"tiempoUsoSinPausa\": 120,\r\n            \"totalKmRecorridos\": 20.3\r\n        }\r\n    ]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/monopatines/reporteUso",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"monopatines",
+								"reporteUso"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reporte de uso por km",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqdWFuIiwiYXV0aCI6Ik1BTlRFTiIsImV4cCI6MTczMjQ1NTQ3MSwiaWF0IjoxNzMyMzY5MDcxfQ.oLK2iOXPxtf0hT4WYAG9hwweUBYpLy0bLR_8DVxdoJvG_XaXkPiQyQ1a8n9ur2vVXn01vRv47W306I-qpPnB3g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  [\r\n        {\r\n            \"modelo\": \"Modelo 7\",\r\n            \"latitud\": -37.1234,\r\n           \"longitud\": -59.1234,\r\n            \"estado\": \"en-operacion\",\r\n            \"disponible\": true,\r\n            \"tiempoUsoConPausa\": 120,\r\n            \"tiempoUsoSinPausa\": 100,\r\n            \"totalKmRecorridos\": 15.5\r\n        },\r\n        {\r\n            \"modelo\": \"Modelo 8\",\r\n            \"latitud\": 10,\r\n            \"longitud\": 20,\r\n            \"estado\": \"en-operacion\",\r\n            \"disponible\": true,\r\n            \"tiempoUsoConPausa\": 150,\r\n            \"tiempoUsoSinPausa\": 120,\r\n            \"totalKmRecorridos\": 20.3\r\n        }\r\n    ]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/monopatines/reporteUso/Km",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"monopatines",
+								"reporteUso",
+								"Km"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reporte de uso por km/pausas",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqdWFuIiwiYXV0aCI6Ik1BTlRFTiIsImV4cCI6MTczMjQ1NTQ3MSwiaWF0IjoxNzMyMzY5MDcxfQ.oLK2iOXPxtf0hT4WYAG9hwweUBYpLy0bLR_8DVxdoJvG_XaXkPiQyQ1a8n9ur2vVXn01vRv47W306I-qpPnB3g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  [\r\n        {\r\n            \"modelo\": \"Modelo 7\",\r\n            \"latitud\": -37.1234,\r\n           \"longitud\": -59.1234,\r\n            \"estado\": \"en-operacion\",\r\n            \"disponible\": true,\r\n            \"tiempoUsoConPausa\": 120,\r\n            \"tiempoUsoSinPausa\": 100,\r\n            \"totalKmRecorridos\": 15.5\r\n        },\r\n        {\r\n            \"modelo\": \"Modelo 8\",\r\n            \"latitud\": 10,\r\n            \"longitud\": 20,\r\n            \"estado\": \"en-operacion\",\r\n            \"disponible\": true,\r\n            \"tiempoUsoConPausa\": 150,\r\n            \"tiempoUsoSinPausa\": 120,\r\n            \"totalKmRecorridos\": 20.3\r\n        }\r\n    ]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/monopatines/reporteUso/filtro-tiempos?includeSinPausa=true",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"monopatines",
+								"reporteUso",
+								"filtro-tiempos"
+							],
+							"query": [
+								{
+									"key": "includeSinPausa",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "estado reporte",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqdWFuIiwiYXV0aCI6Ik1BTlRFTiIsImV4cCI6MTczMjQ1NTQ3MSwiaWF0IjoxNzMyMzY5MDcxfQ.oLK2iOXPxtf0hT4WYAG9hwweUBYpLy0bLR_8DVxdoJvG_XaXkPiQyQ1a8n9ur2vVXn01vRv47W306I-qpPnB3g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  [\r\n        {\r\n            \"modelo\": \"Modelo 7\",\r\n            \"latitud\": -37.1234,\r\n           \"longitud\": -59.1234,\r\n            \"estado\": \"en-operacion\",\r\n            \"disponible\": true,\r\n            \"tiempoUsoConPausa\": 120,\r\n            \"tiempoUsoSinPausa\": 100,\r\n            \"totalKmRecorridos\": 15.5\r\n        },\r\n        {\r\n            \"modelo\": \"Modelo 8\",\r\n            \"latitud\": 10,\r\n            \"longitud\": 20,\r\n            \"estado\": \"en-operacion\",\r\n            \"disponible\": true,\r\n            \"tiempoUsoConPausa\": 150,\r\n            \"tiempoUsoSinPausa\": 120,\r\n            \"totalKmRecorridos\": 20.3\r\n        }\r\n    ]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/monopatines/estado/reporte",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"monopatines",
+								"estado",
+								"reporte"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "viajes",
+			"item": [
+				{
+					"name": "buscar viajes",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqdWFuYSIsImF1dGgiOiJBRE1JTiIsImV4cCI6MTczMjQ1NzAxMywiaWF0IjoxNzMyMzcwNjEzfQ.R0Jm1DFrPUhzYVQG3KHeseow6eJZ63acDlf_xSkVCMa2YhLFXqURlQ-3J6jWkUi3krzO3zP4EeTkNQE7zedreQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/viajes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"viajes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crear  viaje",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtaXJpYW4iLCJhdXRoIjoiQURNSU4iLCJleHAiOjE3MzI1NjUyNDYsImlhdCI6MTczMjQ3ODg0Nn0.6xw_wzySHCuC3-IdBQrTtySimGmd4hPXCGW1TMWOBP4oIJEfdUOGkjTqsPPUEWbB29Fy0NHmrQi-3Um3_Q2GbQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"cuentaId\": 123,\r\n        \"fechaInicio\": \"2024-11-11T10:00:00\",\r\n        \"monopatinId\": 456,\r\n        \"costoTotal\": 50.0,\r\n        \"totalKmRecorridos\": 15.0,\r\n        \"totalTiempo\": 1200,\r\n        \"totalTiempoUsoSinPausas\": 1000\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/viajes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"viajes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Iniciar un viaje con monopatín y cuenta de usuario",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtaXJpYW4iLCJhdXRoIjoiQURNSU4iLCJleHAiOjE3MzI1NjUyNDYsImlhdCI6MTczMjQ3ODg0Nn0.6xw_wzySHCuC3-IdBQrTtySimGmd4hPXCGW1TMWOBP4oIJEfdUOGkjTqsPPUEWbB29Fy0NHmrQi-3Um3_Q2GbQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/viajes/iniciar/monopatin/1/cuenta/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"viajes",
+								"iniciar",
+								"monopatin",
+								"1",
+								"cuenta",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtener viajes por id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtaXJpYW4iLCJhdXRoIjoiQURNSU4iLCJleHAiOjE3MzI1NjUyNDYsImlhdCI6MTczMjQ3ODg0Nn0.6xw_wzySHCuC3-IdBQrTtySimGmd4hPXCGW1TMWOBP4oIJEfdUOGkjTqsPPUEWbB29Fy0NHmrQi-3Um3_Q2GbQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/viajes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"viajes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar un viaje por id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtaXJpYW4iLCJhdXRoIjoiQURNSU4iLCJleHAiOjE3MzI1NjUyNDYsImlhdCI6MTczMjQ3ODg0Nn0.6xw_wzySHCuC3-IdBQrTtySimGmd4hPXCGW1TMWOBP4oIJEfdUOGkjTqsPPUEWbB29Fy0NHmrQi-3Um3_Q2GbQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n        \"cuentaId\": 1,\r\n        \"fechaInicio\": \"2024-11-11T10:00:00\",\r\n        \"monopatinId\": 1,\r\n        \"costoTotal\": 60.0,\r\n        \"totalKmRecorridos\": 20.0,\r\n        \"totalTiempo\": 1300,\r\n        \"totalTiempoUsoSinPausas\": 1100\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/viajes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"viajes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminar un viaje por id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtaXJpYW4iLCJhdXRoIjoiQURNSU4iLCJleHAiOjE3MzI1NjUyNDYsImlhdCI6MTczMjQ3ODg0Nn0.6xw_wzySHCuC3-IdBQrTtySimGmd4hPXCGW1TMWOBP4oIJEfdUOGkjTqsPPUEWbB29Fy0NHmrQi-3Um3_Q2GbQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n        \"cuentaId\": 1,\r\n        \"fechaInicio\": \"2024-11-11T10:00:00\",\r\n        \"monopatinId\": 1,\r\n        \"costoTotal\": 60.0,\r\n        \"totalKmRecorridos\": 20.0,\r\n        \"totalTiempo\": 1300,\r\n        \"totalTiempoUsoSinPausas\": 1100\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/viajes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"viajes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crear varios viajes",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtaXJpYW4iLCJhdXRoIjoiQURNSU4iLCJleHAiOjE3MzI1NjUyNDYsImlhdCI6MTczMjQ3ODg0Nn0.6xw_wzySHCuC3-IdBQrTtySimGmd4hPXCGW1TMWOBP4oIJEfdUOGkjTqsPPUEWbB29Fy0NHmrQi-3Um3_Q2GbQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  [\r\n        {\r\n            \"cuentaId\": 123,\r\n            \"fechaInicio\": \"2024-11-11T10:00:00\",\r\n            \"monopatinId\": 456,\r\n            \"costoTotal\": 50.0,\r\n            \"totalKmRecorridos\": 10.0,\r\n            \"totalTiempo\": 900,\r\n            \"totalTiempoUsoSinPausas\": 800\r\n        },\r\n        {\r\n            \"cuentaId\": 124,\r\n            \"fechaInicio\": \"2024-11-12T11:00:00\",\r\n            \"monopatinId\": 457,\r\n            \"costoTotal\": 40.0,\r\n            \"totalKmRecorridos\": 8.0,\r\n            \"totalTiempo\": 800,\r\n            \"totalTiempoUsoSinPausas\": 700\r\n        }\r\n    ]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/viajes/altaViajes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"viajes",
+								"altaViajes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtener  viajes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtaXJpYW4iLCJhdXRoIjoiQURNSU4iLCJleHAiOjE3MzI1NjUyNDYsImlhdCI6MTczMjQ3ODg0Nn0.6xw_wzySHCuC3-IdBQrTtySimGmd4hPXCGW1TMWOBP4oIJEfdUOGkjTqsPPUEWbB29Fy0NHmrQi-3Um3_Q2GbQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  [\r\n        {\r\n            \"cuentaId\": 123,\r\n            \"fechaInicio\": \"2024-11-11T10:00:00\",\r\n            \"monopatinId\": 456,\r\n            \"costoTotal\": 50.0,\r\n            \"totalKmRecorridos\": 10.0,\r\n            \"totalTiempo\": 900,\r\n            \"totalTiempoUsoSinPausas\": 800\r\n        },\r\n        {\r\n            \"cuentaId\": 124,\r\n            \"fechaInicio\": \"2024-11-12T11:00:00\",\r\n            \"monopatinId\": 457,\r\n            \"costoTotal\": 40.0,\r\n            \"totalKmRecorridos\": 8.0,\r\n            \"totalTiempo\": 800,\r\n            \"totalTiempoUsoSinPausas\": 700\r\n        }\r\n    ]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/viajes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"viajes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pausar un viaje",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtaXJpYW4iLCJhdXRoIjoiQURNSU4iLCJleHAiOjE3MzI1NjUyNDYsImlhdCI6MTczMjQ3ODg0Nn0.6xw_wzySHCuC3-IdBQrTtySimGmd4hPXCGW1TMWOBP4oIJEfdUOGkjTqsPPUEWbB29Fy0NHmrQi-3Um3_Q2GbQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  [\r\n        {\r\n            \"cuentaId\": 123,\r\n            \"fechaInicio\": \"2024-11-11T10:00:00\",\r\n            \"monopatinId\": 456,\r\n            \"costoTotal\": 50.0,\r\n            \"totalKmRecorridos\": 10.0,\r\n            \"totalTiempo\": 900,\r\n            \"totalTiempoUsoSinPausas\": 800\r\n        },\r\n        {\r\n            \"cuentaId\": 124,\r\n            \"fechaInicio\": \"2024-11-12T11:00:00\",\r\n            \"monopatinId\": 457,\r\n            \"costoTotal\": 40.0,\r\n            \"totalKmRecorridos\": 8.0,\r\n            \"totalTiempo\": 800,\r\n            \"totalTiempoUsoSinPausas\": 700\r\n        }\r\n    ]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/viajes/1/pausar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"viajes",
+								"1",
+								"pausar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reanudar un viaje",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjYW1pbG8iLCJhdXRoIjoiQURNSU4iLCJleHAiOjE3MzI2MjYyMjQsImlhdCI6MTczMjUzOTgyNH0.emN5nQ_5FVu5vCSopZOtovjD3dutRK1LLlyVQLxVSKSlScqvjdhFUHDTFrAArmtiw6xNwumYCnaAci2Y3fylrQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  \r\n        {\r\n            \"cuentaId\": 3,\r\n            \"fechaInicio\": \"2024-11-11T10:30:00\",\r\n            \"monopatinId\": 2,\r\n            \"costoTotal\": 50.0,\r\n            \"totalKmRecorridos\": 10.0,\r\n            \"totalTiempo\": 900,\r\n            \"totalTiempoUsoSinPausas\": 800\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/viajes/1/reanudar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"viajes",
+								"1",
+								"reanudar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ubicar un monopatín en una parada",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjYW1pbG8iLCJhdXRoIjoiQURNSU4iLCJleHAiOjE3MzI2MjYyMjQsImlhdCI6MTczMjUzOTgyNH0.emN5nQ_5FVu5vCSopZOtovjD3dutRK1LLlyVQLxVSKSlScqvjdhFUHDTFrAArmtiw6xNwumYCnaAci2Y3fylrQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/viajes/finalizar/3/monopatin/3/parada/c3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"viajes",
+								"finalizar",
+								"3",
+								"monopatin",
+								"3",
+								"parada",
+								"c3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "calcular costo de un viaje",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtaXJpYW4iLCJhdXRoIjoiQURNSU4iLCJleHAiOjE3MzI1NjUyNDYsImlhdCI6MTczMjQ3ODg0Nn0.6xw_wzySHCuC3-IdBQrTtySimGmd4hPXCGW1TMWOBP4oIJEfdUOGkjTqsPPUEWbB29Fy0NHmrQi-3Um3_Q2GbQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  [\r\n        {\r\n            \"cuentaId\": 123,\r\n            \"fechaInicio\": \"2024-11-11T10:00:00\",\r\n            \"monopatinId\": 456,\r\n            \"costoTotal\": 50.0,\r\n            \"totalKmRecorridos\": 10.0,\r\n            \"totalTiempo\": 900,\r\n            \"totalTiempoUsoSinPausas\": 800\r\n        },\r\n        {\r\n            \"cuentaId\": 124,\r\n            \"fechaInicio\": \"2024-11-12T11:00:00\",\r\n            \"monopatinId\": 457,\r\n            \"costoTotal\": 40.0,\r\n            \"totalKmRecorridos\": 8.0,\r\n            \"totalTiempo\": 800,\r\n            \"totalTiempoUsoSinPausas\": 700\r\n        }\r\n    ]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/viajes/1/costo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"viajes",
+								"1",
+								"costo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "calcular tiempo de uso de un viaje",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtaXJpYW4iLCJhdXRoIjoiQURNSU4iLCJleHAiOjE3MzI1NjUyNDYsImlhdCI6MTczMjQ3ODg0Nn0.6xw_wzySHCuC3-IdBQrTtySimGmd4hPXCGW1TMWOBP4oIJEfdUOGkjTqsPPUEWbB29Fy0NHmrQi-3Um3_Q2GbQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  [\r\n        {\r\n            \"cuentaId\": 123,\r\n            \"fechaInicio\": \"2024-11-11T10:00:00\",\r\n            \"monopatinId\": 456,\r\n            \"costoTotal\": 50.0,\r\n            \"totalKmRecorridos\": 10.0,\r\n            \"totalTiempo\": 900,\r\n            \"totalTiempoUsoSinPausas\": 800\r\n        },\r\n        {\r\n            \"cuentaId\": 124,\r\n            \"fechaInicio\": \"2024-11-12T11:00:00\",\r\n            \"monopatinId\": 457,\r\n            \"costoTotal\": 40.0,\r\n            \"totalKmRecorridos\": 8.0,\r\n            \"totalTiempo\": 800,\r\n            \"totalTiempoUsoSinPausas\": 700\r\n        }\r\n    ]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/viajes/1/tiempo-uso",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"viajes",
+								"1",
+								"tiempo-uso"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener monopatines con más de X viajes en un año",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtaXJpYW4iLCJhdXRoIjoiQURNSU4iLCJleHAiOjE3MzI1NjUyNDYsImlhdCI6MTczMjQ3ODg0Nn0.6xw_wzySHCuC3-IdBQrTtySimGmd4hPXCGW1TMWOBP4oIJEfdUOGkjTqsPPUEWbB29Fy0NHmrQi-3Um3_Q2GbQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  [\r\n        {\r\n            \"cuentaId\": 123,\r\n            \"fechaInicio\": \"2024-11-11T10:00:00\",\r\n            \"monopatinId\": 456,\r\n            \"costoTotal\": 50.0,\r\n            \"totalKmRecorridos\": 10.0,\r\n            \"totalTiempo\": 900,\r\n            \"totalTiempoUsoSinPausas\": 800\r\n        },\r\n        {\r\n            \"cuentaId\": 124,\r\n            \"fechaInicio\": \"2024-11-12T11:00:00\",\r\n            \"monopatinId\": 457,\r\n            \"costoTotal\": 40.0,\r\n            \"totalKmRecorridos\": 8.0,\r\n            \"totalTiempo\": 800,\r\n            \"totalTiempoUsoSinPausas\": 700\r\n        }\r\n    ]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/viajes/reporte/monopatines?anio=2024&minViajes=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"viajes",
+								"reporte",
+								"monopatines"
+							],
+							"query": [
+								{
+									"key": "anio",
+									"value": "2024"
+								},
+								{
+									"key": "minViajes",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener el total facturado en un rango de meses de un año",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtaXJpYW4iLCJhdXRoIjoiQURNSU4iLCJleHAiOjE3MzI1NjUyNDYsImlhdCI6MTczMjQ3ODg0Nn0.6xw_wzySHCuC3-IdBQrTtySimGmd4hPXCGW1TMWOBP4oIJEfdUOGkjTqsPPUEWbB29Fy0NHmrQi-3Um3_Q2GbQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  [\r\n        {\r\n            \"cuentaId\": 123,\r\n            \"fechaInicio\": \"2024-11-11T10:00:00\",\r\n            \"monopatinId\": 456,\r\n            \"costoTotal\": 50.0,\r\n            \"totalKmRecorridos\": 10.0,\r\n            \"totalTiempo\": 900,\r\n            \"totalTiempoUsoSinPausas\": 800\r\n        },\r\n        {\r\n            \"cuentaId\": 124,\r\n            \"fechaInicio\": \"2024-11-12T11:00:00\",\r\n            \"monopatinId\": 457,\r\n            \"costoTotal\": 40.0,\r\n            \"totalKmRecorridos\": 8.0,\r\n            \"totalTiempo\": 800,\r\n            \"totalTiempoUsoSinPausas\": 700\r\n        }\r\n    ]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/viajes/facturado?anio=2023&mesInicio=1&mesFin=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"viajes",
+								"facturado"
+							],
+							"query": [
+								{
+									"key": "anio",
+									"value": "2023"
+								},
+								{
+									"key": "mesInicio",
+									"value": "1"
+								},
+								{
+									"key": "mesFin",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "viajes por id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtaXJpYW4iLCJhdXRoIjoiQURNSU4iLCJleHAiOjE3MzI1NjUyNDYsImlhdCI6MTczMjQ3ODg0Nn0.6xw_wzySHCuC3-IdBQrTtySimGmd4hPXCGW1TMWOBP4oIJEfdUOGkjTqsPPUEWbB29Fy0NHmrQi-3Um3_Q2GbQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  [\r\n        {\r\n            \"cuentaId\": 123,\r\n            \"fechaInicio\": \"2024-11-11T10:00:00\",\r\n            \"monopatinId\": 456,\r\n            \"costoTotal\": 50.0,\r\n            \"totalKmRecorridos\": 10.0,\r\n            \"totalTiempo\": 900,\r\n            \"totalTiempoUsoSinPausas\": 800\r\n        },\r\n        {\r\n            \"cuentaId\": 124,\r\n            \"fechaInicio\": \"2024-11-12T11:00:00\",\r\n            \"monopatinId\": 457,\r\n            \"costoTotal\": 40.0,\r\n            \"totalKmRecorridos\": 8.0,\r\n            \"totalTiempo\": 800,\r\n            \"totalTiempoUsoSinPausas\": 700\r\n        }\r\n    ]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/viajes/viajesPor/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"viajes",
+								"viajesPor",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pausas",
+			"item": [
+				{
+					"name": "crear una pausa",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtaXJpYW4iLCJhdXRoIjoiQURNSU4iLCJleHAiOjE3MzI1NjUyNDYsImlhdCI6MTczMjQ3ODg0Nn0.6xw_wzySHCuC3-IdBQrTtySimGmd4hPXCGW1TMWOBP4oIJEfdUOGkjTqsPPUEWbB29Fy0NHmrQi-3Um3_Q2GbQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  [\r\n        {\r\n            \"cuentaId\": 123,\r\n            \"fechaInicio\": \"2024-11-11T10:00:00\",\r\n            \"monopatinId\": 456,\r\n            \"costoTotal\": 50.0,\r\n            \"totalKmRecorridos\": 10.0,\r\n            \"totalTiempo\": 900,\r\n            \"totalTiempoUsoSinPausas\": 800\r\n        },\r\n        {\r\n            \"cuentaId\": 124,\r\n            \"fechaInicio\": \"2024-11-12T11:00:00\",\r\n            \"monopatinId\": 457,\r\n            \"costoTotal\": 40.0,\r\n            \"totalKmRecorridos\": 8.0,\r\n            \"totalTiempo\": 800,\r\n            \"totalTiempoUsoSinPausas\": 700\r\n        }\r\n    ]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/pausas/altaPausa/1?horaInicio=2024-11-14T10:00:00&horaFin=2024-11-14T16:00:00",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"pausas",
+								"altaPausa",
+								"1"
+							],
+							"query": [
+								{
+									"key": "horaInicio",
+									"value": "2024-11-14T10:00:00"
+								},
+								{
+									"key": "horaFin",
+									"value": "2024-11-14T16:00:00"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtener una pausa por id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtaXJpYW4iLCJhdXRoIjoiQURNSU4iLCJleHAiOjE3MzI1NjUyNDYsImlhdCI6MTczMjQ3ODg0Nn0.6xw_wzySHCuC3-IdBQrTtySimGmd4hPXCGW1TMWOBP4oIJEfdUOGkjTqsPPUEWbB29Fy0NHmrQi-3Um3_Q2GbQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  [\r\n        {\r\n            \"cuentaId\": 123,\r\n            \"fechaInicio\": \"2024-11-11T10:00:00\",\r\n            \"monopatinId\": 456,\r\n            \"costoTotal\": 50.0,\r\n            \"totalKmRecorridos\": 10.0,\r\n            \"totalTiempo\": 900,\r\n            \"totalTiempoUsoSinPausas\": 800\r\n        },\r\n        {\r\n            \"cuentaId\": 124,\r\n            \"fechaInicio\": \"2024-11-12T11:00:00\",\r\n            \"monopatinId\": 457,\r\n            \"costoTotal\": 40.0,\r\n            \"totalKmRecorridos\": 8.0,\r\n            \"totalTiempo\": 800,\r\n            \"totalTiempoUsoSinPausas\": 700\r\n        }\r\n    ]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/pausas/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"pausas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar una pausa",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtaXJpYW4iLCJhdXRoIjoiQURNSU4iLCJleHAiOjE3MzI1NjUyNDYsImlhdCI6MTczMjQ3ODg0Nn0.6xw_wzySHCuC3-IdBQrTtySimGmd4hPXCGW1TMWOBP4oIJEfdUOGkjTqsPPUEWbB29Fy0NHmrQi-3Um3_Q2GbQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  [\r\n        {\r\n            \"cuentaId\": 123,\r\n            \"fechaInicio\": \"2024-11-11T10:00:00\",\r\n            \"monopatinId\": 456,\r\n            \"costoTotal\": 50.0,\r\n            \"totalKmRecorridos\": 10.0,\r\n            \"totalTiempo\": 900,\r\n            \"totalTiempoUsoSinPausas\": 800\r\n        },\r\n        {\r\n            \"cuentaId\": 124,\r\n            \"fechaInicio\": \"2024-11-12T11:00:00\",\r\n            \"monopatinId\": 457,\r\n            \"costoTotal\": 40.0,\r\n            \"totalKmRecorridos\": 8.0,\r\n            \"totalTiempo\": 800,\r\n            \"totalTiempoUsoSinPausas\": 700\r\n        }\r\n    ]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/pausas/altaPausa/1?horaInicio=2024-11-14T10:00:00&horaFin=2024-11-14T17:00:00",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"pausas",
+								"altaPausa",
+								"1"
+							],
+							"query": [
+								{
+									"key": "horaInicio",
+									"value": "2024-11-14T10:00:00"
+								},
+								{
+									"key": "horaFin",
+									"value": "2024-11-14T17:00:00"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "borrar una pausa",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtaXJpYW4iLCJhdXRoIjoiQURNSU4iLCJleHAiOjE3MzI1NjUyNDYsImlhdCI6MTczMjQ3ODg0Nn0.6xw_wzySHCuC3-IdBQrTtySimGmd4hPXCGW1TMWOBP4oIJEfdUOGkjTqsPPUEWbB29Fy0NHmrQi-3Um3_Q2GbQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  [\r\n        {\r\n            \"cuentaId\": 123,\r\n            \"fechaInicio\": \"2024-11-11T10:00:00\",\r\n            \"monopatinId\": 456,\r\n            \"costoTotal\": 50.0,\r\n            \"totalKmRecorridos\": 10.0,\r\n            \"totalTiempo\": 900,\r\n            \"totalTiempoUsoSinPausas\": 800\r\n        },\r\n        {\r\n            \"cuentaId\": 124,\r\n            \"fechaInicio\": \"2024-11-12T11:00:00\",\r\n            \"monopatinId\": 457,\r\n            \"costoTotal\": 40.0,\r\n            \"totalKmRecorridos\": 8.0,\r\n            \"totalTiempo\": 800,\r\n            \"totalTiempoUsoSinPausas\": 700\r\n        }\r\n    ]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/pausas/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"pausas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "Crear múltiples usuarios",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtaXJpYW4iLCJhdXRoIjoiQURNSU4iLCJleHAiOjE3MzI1NjUyNDYsImlhdCI6MTczMjQ3ODg0Nn0.6xw_wzySHCuC3-IdBQrTtySimGmd4hPXCGW1TMWOBP4oIJEfdUOGkjTqsPPUEWbB29Fy0NHmrQi-3Um3_Q2GbQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " [\r\n        {\r\n            \"contrasenia\": \"password123\",\r\n            \"nombre\": \"Juan\",\r\n            \"apellido\": \"Perez\",\r\n            \"celular\": \"1234567890\",\r\n            \"email\": \"juan.perez@example.com\",\r\n            \"latitud\": -37.1234,\r\n            \"longitud\": -59.4568\r\n        },\r\n        {\r\n            \"contrasenia\": \"password456\",\r\n            \"nombre\": \"Maria\",\r\n            \"apellido\": \"Lopez\",\r\n            \"celular\": \"0987654321\",\r\n            \"email\": \"maria.lopez@example.com\",\r\n            \"latitud\": -37.4587,\r\n            \"longitud\": -59.3549\r\n        }\r\n    ]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/usuarios/crearUsuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"usuarios",
+								"crearUsuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtener todos los usuarios",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtaXJpYW4iLCJhdXRoIjoiQURNSU4iLCJleHAiOjE3MzI1NjUyNDYsImlhdCI6MTczMjQ3ODg0Nn0.6xw_wzySHCuC3-IdBQrTtySimGmd4hPXCGW1TMWOBP4oIJEfdUOGkjTqsPPUEWbB29Fy0NHmrQi-3Um3_Q2GbQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " [\r\n        {\r\n            \"contrasenia\": \"password123\",\r\n            \"nombre\": \"Juan\",\r\n            \"apellido\": \"Perez\",\r\n            \"celular\": \"1234567890\",\r\n            \"email\": \"juan.perez@example.com\",\r\n            \"latitud\": -37.1234,\r\n            \"longitud\": -59.4568\r\n        },\r\n        {\r\n            \"contrasenia\": \"password456\",\r\n            \"nombre\": \"Maria\",\r\n            \"apellido\": \"Lopez\",\r\n            \"celular\": \"0987654321\",\r\n            \"email\": \"maria.lopez@example.com\",\r\n            \"latitud\": -37.4587,\r\n            \"longitud\": -59.3549\r\n        }\r\n    ]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crear un  usuario",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtaXJpYW4iLCJhdXRoIjoiQURNSU4iLCJleHAiOjE3MzI1NjUyNDYsImlhdCI6MTczMjQ3ODg0Nn0.6xw_wzySHCuC3-IdBQrTtySimGmd4hPXCGW1TMWOBP4oIJEfdUOGkjTqsPPUEWbB29Fy0NHmrQi-3Um3_Q2GbQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n        \"contrasenia\": \"password888\",\r\n        \"nombre\": \"Ana\",\r\n        \"apellido\": \"Lopez\",\r\n        \"celular\": \"987654321\",\r\n        \"email\": \"ana.lolo@example.com\",\r\n        \"latitud\": -37.3150,\r\n        \"longitud\": -59.1350\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtener  un  usuario",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtaXJpYW4iLCJhdXRoIjoiQURNSU4iLCJleHAiOjE3MzI1NjUyNDYsImlhdCI6MTczMjQ3ODg0Nn0.6xw_wzySHCuC3-IdBQrTtySimGmd4hPXCGW1TMWOBP4oIJEfdUOGkjTqsPPUEWbB29Fy0NHmrQi-3Um3_Q2GbQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n        \"contrasenia\": \"password888\",\r\n        \"nombre\": \"Ana\",\r\n        \"apellido\": \"Lopez\",\r\n        \"celular\": \"987654321\",\r\n        \"email\": \"ana.lolo@example.com\",\r\n        \"latitud\": -37.3150,\r\n        \"longitud\": -59.1350\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/usuarios/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"usuarios",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar  un  usuario",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtaXJpYW4iLCJhdXRoIjoiQURNSU4iLCJleHAiOjE3MzI1NjUyNDYsImlhdCI6MTczMjQ3ODg0Nn0.6xw_wzySHCuC3-IdBQrTtySimGmd4hPXCGW1TMWOBP4oIJEfdUOGkjTqsPPUEWbB29Fy0NHmrQi-3Um3_Q2GbQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n        \"contrasenia\": \"passwornuevo\",\r\n        \"nombre\": \"Ana\",\r\n        \"apellido\": \"Lopez\",\r\n        \"celular\": \"987654321\",\r\n        \"email\": \"ana.lolo@example.com\",\r\n        \"latitud\": -37.3150,\r\n        \"longitud\": -59.1350\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/usuarios/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"usuarios",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminar  un  usuario",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtaXJpYW4iLCJhdXRoIjoiQURNSU4iLCJleHAiOjE3MzI1NjUyNDYsImlhdCI6MTczMjQ3ODg0Nn0.6xw_wzySHCuC3-IdBQrTtySimGmd4hPXCGW1TMWOBP4oIJEfdUOGkjTqsPPUEWbB29Fy0NHmrQi-3Um3_Q2GbQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n        \"contrasenia\": \"passwornuevo\",\r\n        \"nombre\": \"Ana\",\r\n        \"apellido\": \"Lopez\",\r\n        \"celular\": \"987654321\",\r\n        \"email\": \"ana.lolo@example.com\",\r\n        \"latitud\": -37.3150,\r\n        \"longitud\": -59.1350\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/usuarios/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"usuarios",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener monopatines cercanos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtaXJpYW4iLCJhdXRoIjoiQURNSU4iLCJleHAiOjE3MzI1NjUyNDYsImlhdCI6MTczMjQ3ODg0Nn0.6xw_wzySHCuC3-IdBQrTtySimGmd4hPXCGW1TMWOBP4oIJEfdUOGkjTqsPPUEWbB29Fy0NHmrQi-3Um3_Q2GbQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n        \"contrasenia\": \"passwornuevo\",\r\n        \"nombre\": \"Ana\",\r\n        \"apellido\": \"Lopez\",\r\n        \"celular\": \"987654321\",\r\n        \"email\": \"ana.lolo@example.com\",\r\n        \"latitud\": -37.3150,\r\n        \"longitud\": -59.1350\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/usuarios/2/monopatines-cercanos?radio=20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"usuarios",
+								"2",
+								"monopatines-cercanos"
+							],
+							"query": [
+								{
+									"key": "radio",
+									"value": "20"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "cuentas",
+			"item": [
+				{
+					"name": "Obtener monopatines cercanos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtaXJpYW4iLCJhdXRoIjoiQURNSU4iLCJleHAiOjE3MzI1NjUyNDYsImlhdCI6MTczMjQ3ODg0Nn0.6xw_wzySHCuC3-IdBQrTtySimGmd4hPXCGW1TMWOBP4oIJEfdUOGkjTqsPPUEWbB29Fy0NHmrQi-3Um3_Q2GbQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " [\r\n        {\r\n            \"fechaAlta\": \"2024-11-11T10:00:00\",\r\n            \"saldo\": 500.0,\r\n            \"idMercadoPago\": \"mp123\",\r\n            \"anulada\": false\r\n        },\r\n        {\r\n            \"fechaAlta\": \"2024-11-12T11:30:00\",\r\n            \"saldo\": 1000.0,\r\n            \"idMercadoPago\": \"mp456\",\r\n            \"anulada\": false\r\n        }\r\n    ]\r\n    ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/cuentas/crearCuentas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cuentas",
+								"crearCuentas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crear una cuenta",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtaXJpYW4iLCJhdXRoIjoiQURNSU4iLCJleHAiOjE3MzI1NjUyNDYsImlhdCI6MTczMjQ3ODg0Nn0.6xw_wzySHCuC3-IdBQrTtySimGmd4hPXCGW1TMWOBP4oIJEfdUOGkjTqsPPUEWbB29Fy0NHmrQi-3Um3_Q2GbQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"fechaAlta\": \"2024-11-12T12:00:00\",\r\n        \"saldo\": 200.0,\r\n        \"idMercadoPago\": \"mp789\",\r\n        \"anulada\": false\r\n    }\r\n   ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/cuentas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cuentas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtener una cuenta",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtaXJpYW4iLCJhdXRoIjoiQURNSU4iLCJleHAiOjE3MzI1NjUyNDYsImlhdCI6MTczMjQ3ODg0Nn0.6xw_wzySHCuC3-IdBQrTtySimGmd4hPXCGW1TMWOBP4oIJEfdUOGkjTqsPPUEWbB29Fy0NHmrQi-3Um3_Q2GbQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"fechaAlta\": \"2024-11-12T12:00:00\",\r\n        \"saldo\": 200.0,\r\n        \"idMercadoPago\": \"mp789\",\r\n        \"anulada\": false\r\n    }\r\n   ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/cuentas/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cuentas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtener todas las cuentas",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtaXJpYW4iLCJhdXRoIjoiQURNSU4iLCJleHAiOjE3MzI1NjUyNDYsImlhdCI6MTczMjQ3ODg0Nn0.6xw_wzySHCuC3-IdBQrTtySimGmd4hPXCGW1TMWOBP4oIJEfdUOGkjTqsPPUEWbB29Fy0NHmrQi-3Um3_Q2GbQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"fechaAlta\": \"2024-11-12T12:00:00\",\r\n        \"saldo\": 200.0,\r\n        \"idMercadoPago\": \"mp789\",\r\n        \"anulada\": false\r\n    }\r\n   ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/cuentas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cuentas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminar una cuenta",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtaXJpYW4iLCJhdXRoIjoiQURNSU4iLCJleHAiOjE3MzI1NjUyNDYsImlhdCI6MTczMjQ3ODg0Nn0.6xw_wzySHCuC3-IdBQrTtySimGmd4hPXCGW1TMWOBP4oIJEfdUOGkjTqsPPUEWbB29Fy0NHmrQi-3Um3_Q2GbQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"fechaAlta\": \"2023-11-12T14:00:00\",\r\n        \"saldo\": 1500.0,\r\n        \"idMercadoPago\": \"mp101112\",\r\n        \"anulada\": false\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/cuentas/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cuentas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ver si una cuenta existe",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtaXJpYW4iLCJhdXRoIjoiQURNSU4iLCJleHAiOjE3MzI1NjUyNDYsImlhdCI6MTczMjQ3ODg0Nn0.6xw_wzySHCuC3-IdBQrTtySimGmd4hPXCGW1TMWOBP4oIJEfdUOGkjTqsPPUEWbB29Fy0NHmrQi-3Um3_Q2GbQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"fechaAlta\": \"2023-11-12T14:00:00\",\r\n        \"saldo\": 1500.0,\r\n        \"idMercadoPago\": \"mp101112\",\r\n        \"anulada\": false\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/cuentas/cuenta/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cuentas",
+								"cuenta",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Asociar un usuario a una cuenta",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtaXJpYW4iLCJhdXRoIjoiQURNSU4iLCJleHAiOjE3MzI1NjUyNDYsImlhdCI6MTczMjQ3ODg0Nn0.6xw_wzySHCuC3-IdBQrTtySimGmd4hPXCGW1TMWOBP4oIJEfdUOGkjTqsPPUEWbB29Fy0NHmrQi-3Um3_Q2GbQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"fechaAlta\": \"2023-11-12T14:00:00\",\r\n        \"saldo\": 1500.0,\r\n        \"idMercadoPago\": \"mp101112\",\r\n        \"anulada\": false\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/cuentas/2/usuarios/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cuentas",
+								"2",
+								"usuarios",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Descontar saldo de una cuenta",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtaXJpYW4iLCJhdXRoIjoiQURNSU4iLCJleHAiOjE3MzI1NjUyNDYsImlhdCI6MTczMjQ3ODg0Nn0.6xw_wzySHCuC3-IdBQrTtySimGmd4hPXCGW1TMWOBP4oIJEfdUOGkjTqsPPUEWbB29Fy0NHmrQi-3Um3_Q2GbQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"fechaAlta\": \"2023-11-12T14:00:00\",\r\n        \"saldo\": 1500.0,\r\n        \"idMercadoPago\": \"mp101112\",\r\n        \"anulada\": false\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/cuentas/2/descontar?monto=200",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cuentas",
+								"2",
+								"descontar"
+							],
+							"query": [
+								{
+									"key": "monto",
+									"value": "200"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Anular  una cuenta",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtaXJpYW4iLCJhdXRoIjoiQURNSU4iLCJleHAiOjE3MzI1NjUyNDYsImlhdCI6MTczMjQ3ODg0Nn0.6xw_wzySHCuC3-IdBQrTtySimGmd4hPXCGW1TMWOBP4oIJEfdUOGkjTqsPPUEWbB29Fy0NHmrQi-3Um3_Q2GbQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"fechaAlta\": \"2024-11-10T10:00:00\",\r\n        \"saldo\": 0.0,\r\n        \"idMercadoPago\": \"mp123\",\r\n        \"anulada\": true\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/cuentas/2/anular",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cuentas",
+								"2",
+								"anular"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
