@@ -24,6 +24,14 @@ Este proyecto es una aplicación backend desarrollada con arquitectura de micros
 - `microservicio-gateway`: Puerta de entrada al sistema (API Gateway).
 - `shared-dto`: Librería común de clases compartidas entre servicios.
 
+  📌 Notas
+Cada microservicio cuenta con su propio archivo de endpoints detallando todas las rutas disponibles,
+sus métodos HTTP, los parámetros requeridos y ejemplos de uso.
+
+Los servicios pueden ejecutarse de forma independiente para pruebas individuales.
+
+Se recomienda utilizar Postman o Swagger UI (si está habilitado) para testear los endpoints.
+
 ## ⚙️ Cómo ejecutar el proyecto
 
 1. Clonar el repositorio:
@@ -72,6 +80,16 @@ This project is a backend application built using microservices architecture. It
 - `microservicio-mantenimiento`: Maintenance service for scooters.
 - `microservicio-gateway`: Entry point (API Gateway).
 - `shared-dto`: Common shared classes across services.
+
+  📌 Notes
+Each microservice includes its own file with a detailed list of API endpoints,
+ HTTP methods, request parameters, and examples.
+
+Services can be tested independently.
+
+Postman or Swagger UI (if enabled) are recommended for API testing.
+
+
 
 ## ⚙️ How to Run the Project
 
