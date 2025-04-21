@@ -1,0 +1,96 @@
+
+services:
+  mysql_usuario:
+    image: mysql:latest
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+      MYSQL_DATABASE: usuario
+    ports:
+      - "3306:3306"
+    networks:
+      - mysql_network
+    volumes:
+      - mysql-usuario-data:/var/lib/mysql
+
+
+  mysql_administrador:
+      image: mysql:latest
+      environment:
+        MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+        MYSQL_DATABASE: administrador
+      ports:
+        - "3307:3306"
+      networks:
+        - mysql_network
+      volumes:
+        - mysql-administrador-data:/var/lib/mysql
+
+  mysql_mantenimiento:
+      image: mysql:latest
+      environment:
+        MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+        MYSQL_DATABASE: mantenimiento
+      ports:
+        - "3308:3306"
+      networks:
+        - mysql_network
+      volumes:
+        - mysql-mantenimiento-data:/var/lib/mysql
+
+  mysql_monopatin:
+      image: mysql:latest
+      environment:
+        MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+        MYSQL_DATABASE: monopatin
+      ports:
+        - "3309:3306"
+      networks:
+        - mysql_network
+      volumes:
+        - mysql-monopatin-data:/var/lib/mysql
+
+  mysql_viaje:
+      image: mysql:latest
+      environment:
+        MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+        MYSQL_DATABASE: viaje
+      ports:
+        - "3310:3306"
+      networks:
+        - mysql_network
+      volumes:
+        - mysql-viaje-data:/var/lib/mysql
+
+  mysql_auth:
+    image: mysql:latest
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+      MYSQL_DATABASE: autorizacion
+    ports:
+      - "3311:3306"
+    networks:
+      - mysql_network
+    volumes:
+      - mysql-autorizacion-data:/var/lib/mysql
+
+  mongodb:
+      image: mongo:latest
+      environment:
+        MONGO_INITDB_DATABASE: parada
+      ports:
+        - "27017:27017"
+      volumes:
+        - mongodb-data:/data/db
+
+networks:
+    mysql_network:
+      driver: bridge
+
+volumes:
+    mysql-usuario-data:
+    mysql-administrador-data:
+    mysql-mantenimiento-data:
+    mysql-monopatin-data:
+    mysql-viaje-data:
+    mysql-autorizacion-data:
+    mongodb-data:
