@@ -81,7 +81,8 @@ This project is a backend application built using microservices architecture. It
    cd Microservices_monopatines
 2. Start the services with Docker Compose:
 docker-compose up --build
-3.Access the endpoints through the gateway at http://localhost:8080
+
+3. Access the endpoints through the gateway at http://localhost:8080
 Make sure Docker and Docker Compose are installed.
 -----------------------------------------
 
